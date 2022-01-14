@@ -65,8 +65,8 @@
     width: 1110px;
     display: flex;
     &__column{
-        width: 33%;
-        margin-right: 24px;
+        width: 33.33%;
+//        margin-right: 24px;
         div:last-child{
             margin-bottom: 0;
         }
@@ -199,5 +199,77 @@
     &__header:before{
         @extend %circle-before-stat-name;
         background-color: $live-color;
+    }
+}
+
+#planned-column {
+    padding-right: 16px;
+}
+#in-progress-column {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#live-column{
+    padding-left: 16px;
+}
+
+@media screen and (max-width: 1110px){
+    .container {
+        padding-top: 56px;
+        max-width: 690px;
+    }
+    .summary{
+        width: 690px;
+        &__title{
+            font-size: 14px;
+        }
+        &__description{
+            font-size: 14px;
+        }
+    }
+    .cards{
+        width: 690px;
+    }
+    .card{
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        &__header, &__title, &__description{
+            font-size: 13px;
+        }
+        &__voting,
+        &__voting-arrow,
+        &__voting-number,
+        &__comments,
+        &__comment-icon,
+        &__comment-number{
+            height: 30px;
+        }
+        &__voting-number, &__comment-number{
+            line-height: 30px;
+        }
+    }
+
+    #planned-column {
+        padding-right: 12px;
+    }
+    #in-progress-column {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    #live-column{
+        padding-left: 12px;
+    }
+    #planned-column .card{
+        border-top: 5px solid $planned-color;
+    }
+    #in-progress-column .card{
+        border-top: 5px solid $in-progress-color;
+    }
+    #live-column .card{
+        border-top: 5px solid $live-color;
+    }
+    .tag{
+        margin-bottom: 12px;
     }
 }

@@ -311,8 +311,7 @@ body {
   display: flex;
 }
 .cards__column {
-  width: 33%;
-  margin-right: 24px;
+  width: 33.33%;
 }
 .cards__column div:last-child {
   margin-bottom: 0;
@@ -463,4 +462,82 @@ body {
 }
 #live-column .card__header:before {
   background-color: #62BCFA;
+}
+
+#planned-column {
+  padding-right: 16px;
+}
+
+#in-progress-column {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#live-column {
+  padding-left: 16px;
+}
+
+@media screen and (max-width: 1110px) {
+  .container {
+    padding-top: 56px;
+    max-width: 690px;
+  }
+
+  .summary {
+    width: 690px;
+  }
+  .summary__title {
+    font-size: 14px;
+  }
+  .summary__description {
+    font-size: 14px;
+  }
+
+  .cards {
+    width: 690px;
+  }
+
+  .card {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  .card__header, .card__title, .card__description {
+    font-size: 13px;
+  }
+  .card__voting, .card__voting-arrow, .card__voting-number, .card__comments, .card__comment-icon, .card__comment-number {
+    height: 30px;
+  }
+  .card__voting-number, .card__comment-number {
+    line-height: 30px;
+  }
+
+  #planned-column {
+    padding-right: 12px;
+  }
+
+  #in-progress-column {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  #live-column {
+    padding-left: 12px;
+  }
+
+  #planned-column .card {
+    border-top: 5px solid #F49F85;
+  }
+
+  #in-progress-column .card {
+    border-top: 5px solid #AD1FEA;
+  }
+
+  #live-column .card {
+    border-top: 5px solid #62BCFA;
+  }
+
+  .tag {
+    margin-bottom: 12px;
+  }
 }
