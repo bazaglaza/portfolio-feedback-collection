@@ -1,0 +1,121 @@
+.suggestion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 24px;
+  width: 825px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+.suggestion__left-part, .suggestion__right-part {
+  width: 80px;
+}
+.suggestion__right-part {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.suggestion__center-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 615px;
+  height: 95px;
+}
+.suggestion__voting {
+  height: 53px;
+  width: 40px;
+  border-radius: 10px;
+  background-color: #F2F4FF;
+}
+.suggestion__voting:hover {
+  background-color: #CFD7FF;
+  cursor: pointer;
+}
+.suggestion__voting-arrow {
+  height: 26px;
+  background-image: url("../assets/shared/icon-arrow-up.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.suggestion__voting-number {
+  color: #3A4374;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.suggestion__voting_voted {
+  background-color: #4661E6;
+}
+.suggestion__voting_voted .suggestion__voting-arrow {
+  background-image: url("../assets/shared/icon-arrow-down-white.svg");
+}
+.suggestion__voting_voted .suggestion__voting-number {
+  color: #FFFFFF;
+}
+.suggestion__voting_voted:hover {
+  background-color: #7C91F9;
+}
+.suggestion__suggestion-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3A4374;
+}
+.suggestion__suggestion-description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #647196;
+}
+.suggestion__right-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.suggestion__comments-number {
+  margin-left: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #3A4374;
+}
+.suggestion:hover {
+  cursor: pointer;
+}
+.suggestion:hover .suggestion__suggestion-title {
+  color: #4661E6;
+}
+
+.tag {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #4661E6;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background-color: #F2F4FF;
+}
+
+.tag_active {
+  color: #FFFFFF;
+  background-color: #4661E6;
+}

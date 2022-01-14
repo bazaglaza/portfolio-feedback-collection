@@ -1,0 +1,40 @@
+@import "common-creation-form-style.scss";
+
+.creation-form-container{
+    &__round-plus-button{
+        background-image: url("../assets/shared/icon-edit-feedback.svg");
+    }
+    &__bottom-buttons{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__left-buttons{
+        button{
+            margin: 0;
+        }
+        #delete-suggestion-button{
+            background-color: $red-button-color;
+            &:hover{
+                background-color: $red-button-hover-color;
+            }
+        }
+    }
+    &__right-buttons{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        #edit-cancel-button{
+            background-color: $dark-button-color;
+            &:hover{
+                background-color: $dart-button-hover-color;
+            }
+        }
+        #save-feedback-button{
+            background-color: $aquamarine-color;
+            &:hover{
+                background-color: $aquamarine-hover-color;
+            }
+        }
+    }
+}

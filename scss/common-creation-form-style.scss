@@ -1,0 +1,219 @@
+@import "null-style.scss";
+@import "common-styles.scss";
+
+//Color variables
+$gray-color: #F2F4FF;
+$gray-hover-color: #CFD7FF;
+$white-color: #FFFFFF;
+$purple-color: #4661E6;
+$purple-hover-color: #7C91F9;
+$dark-text-color: #3A4374;
+$light-text-color: #647196;
+$aquamarine-color: #AD1FEA;
+$aquamarine-hover-color: #C75AF6;
+
+body {
+    background-color: $gray-color;
+    font-family: 'Jost', sans-serif;
+}
+textarea{
+    resize: none;
+}
+
+.container {
+    padding-top: 94px;
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.creation-form-container{
+    border-radius: 10px;
+    padding: 64px 42px 32px 42px;
+    background-color: $white-color;
+    &__round-plus-button{
+        position: absolute;
+        height: 56px;
+        width: 56px;
+        background-image: url("../assets/shared/icon-new-feedback.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        margin-top: -92px;
+    }
+    &__title{
+        font-size: 24px;
+        font-weight: 700;
+        color: $dark-text-color;
+        margin-bottom: 40px;
+    }
+    &__main-form{
+        p{
+            font-size: 14;
+            font-weight: 700;
+            color: $dark-text-color;
+            margin-bottom: 8px;
+        }
+        .field-description {
+            font-weight: 400;
+            color: $light-text-color;
+            margin-bottom: 12px;
+        }
+    }
+    &__feedback-title-text,
+    &__category-select,
+    &__feedback-body-text{
+        background-color: $gray-color;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 10px;
+        padding: 0 24px;
+        margin-bottom: 24px;
+        font-size: 15px;
+        color: $dark-text-color;
+    }
+    &__category-select{
+        background: url("../assets/shared/icon-arrow-down.svg") no-repeat $gray-color;
+        background-position: right 18px top 50%;
+        -webkit-appearance: none;
+    }
+    &__feedback-body-text{
+        height: 120px;
+    }
+    &__bottom-buttons{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        button{
+            height: 40px;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin-left: 16px;
+            font-size: 14px;
+            font-weight: 700;
+            color: $white-color;
+            :hover{
+                cursor: pointer;
+            }
+        }
+        #cancel-button{
+            background-color: $dark-text-color;
+            &:hover{
+                background-color: $light-text-color;
+            }
+        }
+        #add-feedback-button{
+            background-color: $aquamarine-color;
+            &:hover{
+                background-color: $aquamarine-hover-color;
+            }
+        }
+    }
+}
+
+select:focus, textarea:focus, input:focus{
+    border: 1px solid $purple-hover-color;
+}
+select:hover{
+    cursor: pointer;
+}
+
+.go-back{
+    &__arrow{
+        background-image: url("../assets/shared/icon-arrow-left.svg");
+    }
+    &__text{
+        color: $light-text-color;
+        font-size: 14px;
+    }
+    margin-bottom: 68px;
+}
+
+.selector{
+    width: 100%;
+    margin-bottom: 24px;
+    &__main-field{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 24px;
+        height: 40px;
+        background-color: $gray-color;
+        border-radius: 10px;
+        &:hover{
+            cursor: pointer;
+            border: 1px solid $purple-hover-color;
+        }
+    }
+    &__input-field{
+        font-size: 16px;
+        font-weight: 400;
+        color: $light-text-color;
+    }
+    &__arrow{
+        height: 40px;
+        width: 40px;
+        background-image: url("../assets/shared/icon-arrow-down.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &__options-container{
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+    &__options{
+        width: 100%;
+        position: absolute;
+        top: 10px;
+        background-color: $white-color;
+        border-radius: 10px;
+        -webkit-box-shadow: 2px 0px 10px 5px rgba(0,0,0,0.25);
+        box-shadow: 2px 0px 10px 5px rgba(0,0,0,0.25);
+        div:last-child{
+            border-bottom: none;
+        }
+    }
+    &__option{
+        display: flex;
+        height: 40px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $gray-color;
+        padding-left: 24px;
+        font-size: 16px;
+        font-weight: 400;
+        color: $light-text-color;
+        &:hover{
+            color: $aquamarine-color;
+            cursor: pointer;
+        }
+    }
+    &__option_active &__checkbox{
+        height: 40px;
+        width: 40px;
+        background-image: url("../assets/shared/icon-check.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &__hidden{
+        display: none;
+    }
+    &__background{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+.options-window {
+    border: 1px solid $purple-hover-color;
+}
+.options-window {
+    .selector__arrow{
+        background-image: url("../assets/shared/icon-arrow-up.svg");
+    }
+}

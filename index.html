@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/main-page-style.css">
+  <script type="text/javascript" src="js/global-settings.js" defer></script>
+  <script type="text/javascript" src="js/common-functions.js" defer></script>
+  <script type="text/javascript" src="js/main-page.js" defer></script>
+
+  <title>Product feedback app for portfolio</title>
+</head>
+<body>
+    <div class="container">
+        <div class="body-container">
+            <div class="body-container__summary">
+                <div class="body-container__header">
+                    <div class="body-container__product-name">
+                        Product Name
+                    </div>
+                    <div class="body-container__desctiption">
+                        Feedback board
+                    </div>
+                </div>
+                <div class="body-container__filter">
+                    <div id="all-filter" class="tag tag_active">
+                        All
+                    </div>
+                    <div id="ui-filter" class="tag">
+                        UI
+                    </div>
+                    <div id="ux-filter" class="tag">
+                        UX
+                    </div>
+                    <div id="enchancement-filter" class="tag">
+                        Enchancement
+                    </div>
+                    <div id="bug-filter" class="tag">
+                        Bug
+                    </div>
+                    <div id="feature-filter" class="tag">
+                        Feature
+                    </div>
+                </div>
+                <div class="body-container__stats">
+                    <div class="body-container__roadmap-container">
+                        <div class="body-container__roadmap">
+                            Roadmap
+                        </div>
+                        <div class="body-container__view">
+                            <a href="roadmap.html">View</a>
+                        </div>
+                    </div>
+                    <div class="body-container__stats-container">
+                        <div class="body-container__planned-container">
+                            <div class="stat-name">
+                                Planned
+                            </div>
+                            <div id="planned-number" class="stat-number">
+                                2
+                            </div>
+                        </div>
+                        <div class="body-container__progress-container">
+                            <div class="stat-name">
+                                In-Progress
+                            </div>
+                            <div id="in-progress-number" class="stat-number">
+                                3
+                            </div>
+                        </div>
+                        <div class="body-container__live-container">
+                            <div class="stat-name">
+                                Live
+                            </div>
+                            <div id="live-number" class="stat-number">
+                                1
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="body-container__main-body">
+                <div class="body-container__main-body-header">
+                    <div class="body-container__left-header">
+                        <div class="body-container__icon-number-suggection">
+                            <div class="body-container__icon">
+
+                            </div>
+                            <div class="body-container__number">
+                                0
+                            </div>
+                            <div class="body-container__suggestion-text">
+                                Suggestion
+                            </div>
+                        </div>
+                        <div class="body-container__sort-container">
+                            <div class="body-container__sort-header">
+                                Sort by: <span id="sort-title-text">Most Upvotes</span>
+                            </div>
+                            <div class="body-container__sort-menu">
+                                <div id="most-upvotes" class="sort-menu sort-menu_active">
+                                    <div class="sort-menu__option-name">
+                                        Most Upvotes
+                                    </div>
+                                    <div class="sort-menu__active-option">
+
+                                    </div>
+                                </div>
+                                <div id="least-upvotes" class="sort-menu">
+                                    <div class="sort-menu__option-name">
+                                        Least Upvotes
+                                    </div>
+                                    <div class="sort-menu__active-option">
+
+                                    </div>
+                                </div>
+                                <div id="most-comments" class="sort-menu">
+                                    <div class="sort-menu__option-name">
+                                        Most Comments
+                                    </div>
+                                    <div class="sort-menu__active-option">
+
+                                    </div>
+                                </div>
+                                <div id="least-comments" class="sort-menu">
+                                    <div class="sort-menu__option-name">
+                                        Least Comments
+                                    </div>
+                                    <div class="sort-menu__active-option">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body-container__right-header">
+                        <div class="add-suggestion-button">
+                            + Add Suggection
+                        </div>
+                    </div>
+                </div>
+                <div class="body-container__suggestions-container">
+                    <div class="body-container__empty-suggestions-window">
+                        <div class="body-container__empty-suggestions-image">
+                            <img src="assets/suggestions/illustration-empty.svg" alt="Empty suggestions picture">
+                        </div>
+                        <div class="body-container__empty-suggestions-title">
+                            There is no feedback yet.
+                        </div>
+                        <div class="body-container__empty-suggestions-description">
+                            <p>Got a suggestion? Found a bug that needs to be squashed?</p>
+                            <p>We love hearing about new ideas to improve our app.</p>
+                        </div>
+                        <div class="body-container__empty-suggestions-button add-suggestion-button">
+                            + Add Feedback
+                        </div>
+                    </div>
+                    <div class="suggestions_list">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

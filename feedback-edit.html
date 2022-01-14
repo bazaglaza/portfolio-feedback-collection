@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/feedback-edit-styles.css">
+
+  <script type="text/javascript" src="js/global-settings.js" defer></script>
+  <script type="text/javascript" src="js/selector-comon.js" defer></script>
+  <script type="text/javascript" src="js/feedback-edit.js" defer></script>
+
+  <title>Product feedback app for portfolio</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="go-back">
+                <div class="go-back__arrow">
+
+                </div>
+                <div class="go-back__text">
+                    Go Back
+                </div>
+            </div>
+            <div class="creation-form-container">
+                <div class="creation-form-container__round-plus-button">
+
+                </div>
+                <div class="creation-form-container__title">
+                    Editing
+                </div>
+                <form class="creation-form-container__main-form">
+                    <p>Feedback Title</p>
+                    <p class="field-description">Add a short, descriptive headline</p>
+                    <input class="creation-form-container__feedback-title-text" type="text" name="feedback-title" value="">
+                    <p>Category</p>
+                    <p class="field-description">Choose a category for your feedback</p>
+
+                    <div id="category-selector" class="selector"></div>
+
+                    <p>Update Status</p>
+                    <p class="field-description">Change feature state</p>
+
+                    <div id="state-selector" class="selector"></div>
+                        
+                    <p>Feedback Detail</p>
+                    <p class="field-description">Include any specific comments on what should be improved, added, etc.</p>
+                    <textarea class="creation-form-container__feedback-body-text" type="text" name="feedback-body" value=""></textarea>
+                    <div class="creation-form-container__bottom-buttons">
+                        <div class="creation-form-container__left-buttons">
+                            <button id="delete-suggestion-button" type="button" name="delete">Delete</button>
+                        </div>
+                        <div class="creation-form-container__right-buttons">
+                            <button id="edit-cancel-button" type="button" name="cancel">Cancel</button>
+                            <button id="save-feedback-button" type="button" name="save">Save Changes</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<html

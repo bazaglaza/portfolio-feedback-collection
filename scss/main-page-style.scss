@@ -1,0 +1,275 @@
+@import "null-style.scss";
+@import "common-styles.scss";
+
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+.body-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 94px;
+    width: 1110px;
+    div:last-child {
+        margin-bottom: 0;
+    }
+   //Left part syles (header, tag-filter, stats)
+    &__summary {
+        width: 255px;
+    }
+    &__header, &__filter, &__stats {
+        border-radius: 10px;
+        padding: 24px;
+        margin-bottom: 24px;
+    }
+    &__header {
+        height: 137px;
+        background-image: url("../assets/suggestions/desktop/background-header.png");
+        color: $white-color;
+    }
+    &__filter, &__stats {
+        background-color: $white-color;
+    }
+    &__filter {
+        .tag {
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 14px;
+            &:hover {
+                cursor: pointer;
+                background-color: $gray-hover-color;
+            }
+        }
+        .tag_active:hover {
+            cursor: default;
+            background-color: $purple-color;
+        }
+    }
+    &__product-name {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 43px;
+        margin-bottom: 8px;
+    }
+    &__desctiption {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    &__roadmap-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        padding: 4px 0;
+    }
+    &__roadmap {
+        font-size: 18px;
+        font-weight: 700;
+        color: $dark-text-color;
+    }
+    &__view {
+        font-size: 13px;
+        font-weight: 600;
+        color: $purple-color;
+        text-decoration: underline;
+        a:hover{
+            cursor: pointer;
+            color: $purple-hover-color;
+        }
+    }
+    &__planned-container, &__progress-container, &__live-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        padding: 4px 0;
+    }
+    &__planned-container {
+        .stat-name:before {
+            @extend %circle-before-stat-name;
+            background-color: $planned-color;
+        }
+    }
+    &__progress-container {
+        .stat-name:before {
+            @extend %circle-before-stat-name;
+            background-color: $in-progress-color;
+        }
+    }
+    &__live-container {
+        .stat-name:before {
+            @extend %circle-before-stat-name;
+            background-color: $live-color;
+        }
+    }
+    //----------------------------------------------
+    //Main body header style
+    &__main-body {
+        width: 825px;
+    }
+    &__main-body-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 72px;
+        margin-bottom: 24px;
+        background-color: #373F68;
+        border-radius: 10px;
+        padding: 16px;
+    }
+    &__left-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 396px;
+    }
+    &__icon-number-suggection {
+        display: flex;
+        width: 200px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__icon {
+        height: 40px;
+        width: 40px;
+        margin-left: 8px;
+        background-image: url("../assets/suggestions/icon-suggestions.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__number, &__suggestion-text {
+        font-size: 18px;
+        font-weight: 700;
+        color: $white-color;
+    }
+    &__number {
+        margin-right: 8px;
+    }
+    &__sort-header {
+        font-size: 14;
+        font-weight: 400;
+        color: $white-color;
+        span {
+            font-weight: 700;
+        }
+        &:after {
+            content: '';
+            height: 8px;
+            width: 8px;
+            display: inline-block;
+            background-image: url('../assets/suggestions/sort-arrow-down.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+        &:hover {
+            cursor: pointer;
+            color: $gray-color;
+        }
+    }
+    &__sort-menu {
+        display: none;
+        position: absolute;
+        top: 182px;
+        z-index: 2;
+        width: 255px;
+        background-color: $white-color;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px 0px #BDC1B8;
+    }
+    //----------------------------------------------
+    //Main body suggestions stylesheet
+    &__suggestions-container {
+        width: 825px;
+    }
+    &__empty-suggestions-window {
+        display: none;
+        width: 825px;
+        height: 600px;
+        background-color: $white-color;
+        border-radius: 10px;
+        text-align: center;
+        padding-top: 110px;
+    }
+    &__empty-suggestions-image {
+        margin-bottom: 54px;
+    }
+    &__empty-suggestions-title {
+        margin-bottom: 16px;
+        padding: 6px 0;
+        font-size: 24px;
+        font-weight: 700;
+        color: $dark-text-color;
+    }
+    &__empty-suggestions-description {
+        margin-bottom: 48px;
+        padding: 6px 0;
+        font-size: 16px;
+        font-weight: 400;
+        color: $light-text-color;
+    }
+    &__empty-suggestions-button {
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    //----------------------------------------------
+}
+
+.add-suggestion-button {
+    height: 44px;
+    width: 158px;
+    line-height: 44px;
+    text-align: center;
+    background-color: $aquamarine-color;
+    font-size: 14px;
+    font-weight: 700;
+    color: $gray-color;
+    border-radius: 10px;
+    &:hover {
+        cursor: pointer;
+        background-color: $aquamarine-hover-color;
+    }
+}
+
+.sort-menu {
+    display: flex;
+    width: 255px;
+    height: 48px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-weight: 400;
+    border-bottom: 1px solid #979797;
+    color: $light-text-color;
+    &:hover {
+        color: $aquamarine-color;
+        cursor: pointer;
+    }
+}
+.sort-menu:last-child {
+    border-bottom: none;
+}
+
+.sort-menu_active {
+    .sort-menu__active-option {
+        height: 12px;
+        width: 12px;
+        background-image: url("../assets/suggestions/cheked-sort-option.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+.stat-name, .stat-number {
+    color: $light-text-color;
+    font-size: 16px;
+    font-weight: 400;
+}
+.stat-number {
+    font-weight: 700;
+}

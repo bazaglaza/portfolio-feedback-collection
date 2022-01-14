@@ -1,0 +1,203 @@
+@import "null-style.scss";
+@import "common-styles.scss";
+
+
+.container {
+    padding-top: 74px;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #373F68;
+    padding: 24px;
+    border-radius: 10px;
+    &__right-part button{
+        height: 40px;
+        width: 160px;
+        border-radius: 10px;
+        background-color: $aquamarine-color;
+        color: $gray-color;
+        font-size: 14px;
+        font-weight: 700;
+        &:hover {
+            background-color: $aquamarine-hover-color;
+            cursor: pointer;
+            color: $gray-hover-color;
+        }
+    }
+    &__title{
+        padding-top: 8px;
+        font-size: 24px;
+        font-weight: 700;
+        color: $white-color;
+    }
+}
+.summary{
+    width: 1110px;
+    &__container{
+        display: flex;
+        div:last-child{
+            margin-right: 0;
+        }
+    }
+    &__header{
+        width: 33.33%;
+        margin-right: 24px;
+        padding: 32px 0;
+    }
+    &__title{
+        font-size: 18px;
+        font-weight: 700;
+        color: $dark-text-color;
+    }
+    &__description{
+        font-size: 16px;
+        font-weight: 400;
+        padding-top: 8px;
+        color: $light-text-color;
+    }
+}
+.cards{
+    width: 1110px;
+    display: flex;
+    &__column{
+        width: 33%;
+        margin-right: 24px;
+        div:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+.card{
+    background-color: $white-color;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 24px;
+    div:last-child{
+        margin-right: 0;
+    }
+    &__header{
+        margin-bottom: 16px;
+        font-size: 16px;
+        font-weight: 400;
+        color: $light-text-color;
+    }
+    &__title{
+        margin-bottom: 16px;
+        font-size: 18px;
+        font-weight: 700;
+        color: $dark-text-color;
+    }
+    &__description{
+        margin-bottom: 16px;
+        font-size: 16px;
+        font-weight: 400;
+        color: $light-text-color;
+    }
+    &__voting-comments-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__voting{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: $gray-color;
+    }
+    &__voting:hover {
+        background-color: $gray-hover-color;
+        cursor: pointer;
+    }
+    &__voting_voted{
+        background-color: $purple-color;
+        .card__voting-arrow {
+            background-image: url("../assets/shared/icon-arrow-down-white.svg");
+        }
+        .card__voting-number {
+            color: $white-color;
+        }
+        &:hover {
+            background-color: $purple-hover-color;
+        }
+    }
+    &__voting-arrow{
+        width: 35px;
+        height: 40px;
+        background-image: url("../assets/shared/icon-arrow-up.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__voting-number{
+        width: 35px;
+        height: 40px;
+        line-height: 40px;
+        color: $dark-text-color;
+        font-size: 13px;
+        font-weight: 700;
+    }
+    &__comments{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 70px;
+        height: 40px;
+    }
+    &__comment-icon{
+        width: 35px;
+        height: 40px;
+        background-image: url("../assets/shared/icon-comments.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__comment-number{
+        height: 40px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 40px;
+        color: $dark-text-color;
+    }
+    &:hover{
+        cursor: pointer;
+        > .card__title {
+            color: $purple-color;
+        }
+        > .card__description {
+            color: $purple-color;
+        }
+    }
+}
+.tag{
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+
+#planned-column .card{
+    border-top: 10px solid $planned-color;
+    &__header:before{
+        @extend %circle-before-stat-name;
+        background-color: $planned-color;
+    }
+}
+#in-progress-column .card{
+    border-top: 10px solid $in-progress-color;
+    &__header:before{
+        @extend %circle-before-stat-name;
+        background-color: $in-progress-color;
+    }
+}
+#live-column .card{
+    border-top: 10px solid $live-color;
+    &__header:before{
+        @extend %circle-before-stat-name;
+        background-color: $live-color;
+    }
+}
