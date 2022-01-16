@@ -228,6 +228,7 @@ body {
 .container {
   max-width: 730px;
   margin: 0 auto;
+  padding-top: 94px;
 }
 
 .go-back__arrow {
@@ -240,7 +241,6 @@ body {
 
 .details_container {
   width: 730px;
-  margin-top: 94px;
 }
 .details_container div:last-child {
   margin-bottom: 0;
@@ -462,4 +462,10 @@ body {
 .reply-to {
   font-weight: 700;
   color: #AD1FEA;
+}
+
+@media screen and (max-width: 1110px) {
+  .container {
+    padding-top: 56px;
+  }
 }

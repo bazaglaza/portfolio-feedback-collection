@@ -4,6 +4,7 @@
 .container {
     max-width: 730px;
     margin: 0 auto;
+    padding-top: 94px;
 }
 
 .go-back{
@@ -18,7 +19,6 @@
 
 .details_container{
     width: 730px;
-    margin-top: 94px;
     div:last-child {
         margin-bottom: 0;
     }
@@ -216,4 +216,10 @@
 .reply-to{
     font-weight: 700;
     color: $aquamarine-color;
+}
+
+@media screen and (max-width: 1110px){
+    .container {
+        padding-top: 56px;
+    }
 }
