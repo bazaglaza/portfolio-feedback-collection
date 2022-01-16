@@ -446,6 +446,15 @@ select:hover {
   background-image: url("../assets/shared/icon-arrow-up.svg");
 }
 
+@media screen and (max-width: 1110px) {
+  .container {
+    padding-top: 56px;
+  }
+
+  .go-back {
+    margin-bottom: 48px;
+  }
+}
 .creation-form-container__round-plus-button {
   background-image: url("../assets/shared/icon-edit-feedback.svg");
 }
