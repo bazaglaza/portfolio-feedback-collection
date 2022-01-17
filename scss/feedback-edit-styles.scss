@@ -38,3 +38,31 @@
         }
     }
 }
+@media screen and (max-width: 710px){
+    .creation-form-container{
+        &__bottom-buttons{
+            flex-direction: column;
+        }
+        &__left-buttons{
+            order: 2;
+            width: 100%;
+            margin-bottom: 8px;
+            #delete-suggestion-button{
+                width: 100%;
+            }
+        }
+        &__right-buttons{
+            width: 100%;
+            order: 1;
+            flex-direction: column;
+            #edit-cancel-button{
+                width: 100%;
+                order: 2;
+            }
+            #save-feedback-button{
+                width: 100%;
+                order: 1;
+            }
+        }
+    }
+}

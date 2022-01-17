@@ -48,7 +48,7 @@ textarea{
     }
     &__main-form{
         p{
-            font-size: 14;
+            font-size: 14px;
             font-weight: 700;
             color: $dark-text-color;
             margin-bottom: 8px;
@@ -224,5 +224,72 @@ select:hover{
     }
     .go-back{
         margin-bottom: 48px;
+    }
+}
+
+@media screen and (max-width: 710px){
+    .container {
+        max-width: 375px;
+        padding: 0 24px;
+        padding-top: 34px;
+    }
+    .creation-form-container{
+        padding: 44px 24px 12px 24px;
+        &__round-plus-button{
+            height: 48px;
+            width: 48px;
+            margin-top: -68px;
+        }
+        &__title{
+            font-size: 18px;
+            margin-bottom: 24px;
+        }
+        &__main-form{
+            p{
+                font-size: 13px;
+            }
+        }
+        &__feedback-title-text,
+        &__category-select,
+        &__feedback-body-text{
+            border-radius: 5px;
+            padding: 0 16px;
+            font-size: 13px;
+        }
+        &__feedback-body-text{
+            padding-bottom: 8px;
+        }
+        &__bottom-buttons{
+            flex-direction: column;
+            button{
+                width: 100%;
+                padding: 0;
+                margin-left: 0;
+                margin-bottom: 12px;
+            }
+        }
+    }
+    #cancel-button{
+        order: 2;
+    }
+    #add-feedback-button{
+        order: 1;
+    }
+    .selector{
+        &__main-field{
+            border-radius: 5px;
+            padding-left: 16px;
+        }
+        &__input-field{
+            font-size: 13px;
+        }
+        &__options{
+            border-radius: 5px;
+        }
+        &__option{
+            padding-left: 16px;
+            font-size: 13px;
+
+        }
     }
 }
