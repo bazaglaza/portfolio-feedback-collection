@@ -18,7 +18,7 @@
 }
 
 .details_container{
-    width: 730px;
+    width: 100%;
     div:last-child {
         margin-bottom: 0;
     }
@@ -29,7 +29,7 @@
 }
 
 .suggestion{
-    width: 730px;
+    width: 100%;
     &:hover {
         cursor: auto;
         .suggestion__suggestion-title {
@@ -220,6 +220,7 @@
 
 @media screen and (max-width: 1110px){
     .container {
+        max-width: 690px;
         padding-top: 56px;
     }
 }

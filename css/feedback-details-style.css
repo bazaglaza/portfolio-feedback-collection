@@ -245,7 +245,7 @@ body {
 }
 
 .details_container {
-  width: 730px;
+  width: 100%;
 }
 .details_container div:last-child {
   margin-bottom: 0;
@@ -256,7 +256,7 @@ body {
 }
 
 .suggestion {
-  width: 730px;
+  width: 100%;
 }
 .suggestion:hover {
   cursor: auto;
@@ -471,6 +471,7 @@ body {
 
 @media screen and (max-width: 1110px) {
   .container {
+    max-width: 690px;
     padding-top: 56px;
   }
 }
