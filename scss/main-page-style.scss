@@ -183,11 +183,11 @@
     //----------------------------------------------
     //Main body suggestions stylesheet
     &__suggestions-container {
-        width: 825px;
+        width: 100%;
     }
     &__empty-suggestions-window {
         display: none;
-        width: 825px;
+        width: 100%; 
         height: 600px;
         background-color: $white-color;
         border-radius: 10px;
@@ -304,7 +304,7 @@
             margin-bottom: 16px;
             padding: 0;
         }
-        
+
         &__main-body {
             width: 690px;
         }

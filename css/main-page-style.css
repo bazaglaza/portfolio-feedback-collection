@@ -444,11 +444,11 @@ body {
           box-shadow: 0px 0px 5px 0px #BDC1B8;
 }
 .body-container__suggestions-container {
-  width: 825px;
+  width: 100%;
 }
 .body-container__empty-suggestions-window {
   display: none;
-  width: 825px;
+  width: 100%;
   height: 600px;
   background-color: #FFFFFF;
   border-radius: 10px;
