@@ -5,12 +5,12 @@
 .container {
     max-width: 1110px;
     margin: 0 auto;
+    padding-top: 94px;
 }
 .body-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 94px;
     width: 1110px;
     div:last-child {
         margin-bottom: 0;
@@ -272,4 +272,42 @@
 }
 .stat-number {
     font-weight: 700;
+}
+
+@media screen and (max-width: 1110px){
+    .container {
+        max-width: 690px;
+        padding-top: 56px;
+    }
+    .body-container {
+        display:block;
+        &__summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 690px;
+        }
+        &__header, &__filter, &__stats {
+            width: 223px;
+            height: 168px;
+        }
+        &__header {
+            background-image: url("../assets/suggestions/tablet/background-header.png");
+        }
+        &__product-name {
+            margin-top: 78px;
+        }
+        &__planned-container, &__progress-container, &__live-container {
+            margin-bottom: 8px;
+        }
+        &__roadmap-container {
+            margin-bottom: 16px;
+            padding: 0;
+        }
+        
+        &__main-body {
+            width: 690px;
+        }
+    }
+
 }

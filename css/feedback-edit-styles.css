@@ -225,6 +225,11 @@ body {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1110px) {
+  .suggestion {
+    width: 690px;
+  }
+}
 body {
   background-color: #F2F4FF;
   font-family: "Jost", sans-serif;

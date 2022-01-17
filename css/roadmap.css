@@ -235,6 +235,11 @@ body {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1110px) {
+  .suggestion {
+    width: 690px;
+  }
+}
 .container {
   padding-top: 74px;
   max-width: 1110px;

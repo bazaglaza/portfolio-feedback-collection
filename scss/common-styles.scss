@@ -155,3 +155,9 @@ body {
         cursor: pointer;
     }
 }
+
+@media screen and (max-width: 1110px){
+    .suggestion {
+        width: 690px;
+    }
+}
