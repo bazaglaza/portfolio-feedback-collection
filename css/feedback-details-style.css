@@ -294,6 +294,7 @@ body {
 
 .comments-container {
   padding: 24px;
+  padding-bottom: 0;
   background-color: #FFFFFF;
   border-radius: 10px;
   margin-bottom: 24px;
@@ -473,5 +474,121 @@ body {
   .container {
     max-width: 690px;
     padding-top: 56px;
+  }
+}
+@media screen and (max-width: 710px) {
+  .container {
+    max-width: 375px;
+    padding: 24px 24px 0 24px;
+  }
+
+  .suggestion {
+    display: block;
+  }
+  .suggestion__center-part {
+    height: auto;
+    width: 100%;
+    display: block;
+  }
+  .suggestion__suggestion-title {
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+  .suggestion__suggestion-description {
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+  .suggestion__voting {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 64px;
+    height: 32px;
+  }
+  .suggestion__voting-arrow {
+    width: 32px;
+    height: 32px;
+  }
+  .suggestion__voting-number {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 6px;
+    font-size: 13px;
+  }
+  .suggestion__comments-number {
+    line-height: 32px;
+    font-size: 13px;
+  }
+
+  .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 14px;
+  }
+
+  .tag {
+    display: inline-block;
+  }
+
+  .comment {
+    margin-top: -16px;
+  }
+  .comment__text {
+    margin-left: -40px;
+  }
+  .comment__user-name, .comment__real-name, .comment__nick-name, .comment__text {
+    font-size: 13px;
+  }
+
+  .reply {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+  }
+
+  .reply-window {
+    margin-top: 12px;
+  }
+  .reply-window__text-area {
+    border-radius: 5px;
+    margin-right: 12px;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  .reply-window__post-button {
+    border-radius: 5px;
+    padding: 0;
+    height: 32px;
+    font-size: 13px;
+    line-height: 32px;
+  }
+
+  .add-comment {
+    padding: 24px;
+    padding-bottom: 18px;
+  }
+  .add-comment__title {
+    margin-bottom: 24px;
+  }
+  .add-comment__text-input {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  .add-comment__characters-limit {
+    font-size: 13px;
   }
 }

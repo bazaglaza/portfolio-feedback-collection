@@ -61,6 +61,7 @@
 
 .comments-container{
     padding: 24px;
+    padding-bottom: 0;
     background-color: $white-color;
     border-radius: 10px;
     margin-bottom: 24px;
@@ -222,5 +223,103 @@
     .container {
         max-width: 690px;
         padding-top: 56px;
+    }
+}
+
+@media screen and (max-width: 710px){
+    .container {
+        max-width: 375px;
+        padding: 24px 24px 0 24px;
+    }
+    .suggestion {
+        display: block;
+        &__center-part {
+            height: auto;
+            width: 100%;
+            display: block;
+        }
+        &__suggestion-title {
+            font-size: 13px;
+            margin-bottom: 14px;
+        }
+        &__suggestion-description {
+            font-size: 13px;
+            margin-bottom: 14px;
+        }
+        &__voting{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 64px;
+            height: 32px;
+        }
+        &__voting-arrow{
+            width: 32px;
+            height: 32px;
+        }
+        &__voting-number{
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            margin-right: 6px;
+            font-size: 13px;
+        }
+        &__comments-number{
+            line-height: 32px;
+            font-size: 13px;
+        }
+    }
+    .footer-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 14px;
+    }
+    .tag{
+        display:inline-block;
+    }
+    .comment{
+        margin-top: -16px;
+        &__text{
+            margin-left: -40px;
+        }
+        &__user-name, &__real-name, &__nick-name, &__text{
+            font-size: 13px;
+        }
+    }
+    .reply{
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-left: 0;
+    }
+    .reply-window{
+        margin-top: 12px;
+        &__text-area{
+            border-radius: 5px;
+            margin-right: 12px;
+            padding: 8px 12px;
+            font-size: 13px;
+        }
+        &__post-button{
+            border-radius: 5px;
+            padding: 0;
+            height: 32px;
+            font-size: 13px;
+            line-height: 32px;
+        }
+    }
+    .add-comment{
+        padding: 24px;
+        padding-bottom: 18px;
+        &__title{
+            margin-bottom: 24px;
+        }
+        &__text-input{
+            padding: 8px 12px;
+            font-size: 13px;
+        }
+        &__characters-limit{
+            font-size: 13px;
+        }
     }
 }
