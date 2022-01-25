@@ -66,7 +66,14 @@ if(all_votings_objects){
     })
 }
 
+//---Mobile resolution handling---
 
+
+if (window.innerWidth < 710) {
+    addClickHandlersForsSummaryStatuses();
+}
+
+//---Helpers---
 
 function createRoadmapCard(suggestion){
     let main_div = document.createElement('div');
@@ -203,4 +210,33 @@ function isSuggestionInRoadmap(suggestion, roadmap_statuses_arrray=["planned", "
     } else {
         return false;
     }
+}
+
+function addClickHandlersForsSummaryStatuses(){
+    const statuses_class_name = "summary__header";
+    const columns_class_name = "cards__column";
+
+    let statuses = document.getElementsByClassName(statuses_class_name);
+    let cards_columns = document.getElementsByClassName(columns_class_name);
+
+    for (let i = 0; i < statuses.length; i++){
+        statuses[i].onclick = function(){
+            status_active_class_name = statuses_class_name + "_active";
+            column_active_class_name = columns_class_name + "_active";
+
+            removeCalssFromArrayOfElements(statuses, status_active_class_name);
+            removeCalssFromArrayOfElements(cards_columns, column_active_class_name);
+
+            statuses[i].classList.add(status_active_class_name);
+            cards_columns[i].classList.add(column_active_class_name);
+        }
+    }
+}
+
+function removeCalssFromArrayOfElements(elements_array, class_to_delete){
+    Array.from(elements_array).forEach(function(item){
+        if (item.classList.contains(class_to_delete)){
+            item.classList.remove(class_to_delete);
+        }
+    })
 }

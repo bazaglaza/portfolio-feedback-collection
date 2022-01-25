@@ -56,7 +56,7 @@ voting.onclick = function(){
 addOnclickActionsForReplyButtons("comment__reply-button");
 addOnclickActionsForReplyButtons("reply__reply-button");
 
-//---TEST---
+//---Mobile resolution handling---
 
 let suggestion_div = document.getElementsByClassName("suggestion")[0];
 if (window.innerWidth < 710) {

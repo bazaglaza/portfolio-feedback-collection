@@ -273,3 +273,87 @@
         margin-bottom: 12px;
     }
 }
+
+@media screen and (max-width: 710px){
+
+    .container {
+        max-width: 375px;
+        padding: 0;
+    }
+
+    .header {
+        width: 375px;
+        padding: 26px 24px;
+        border-radius: 0;
+        &__right-part button{
+            width: 132px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        &__title{
+            font-size: 18px;
+        }
+    }
+    .go-back{
+        &__text{
+            font-size: 13px;
+        }
+        &__arrow{
+            height: 8px;
+            width: 8px;
+        }
+    }
+
+    .summary{
+        width: 375px;
+        &__header{
+            padding: 20px 0;
+            border-bottom: 1px solid $gray-hover-color;
+            margin-right: 0;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &__title{
+            text-align: center;
+            font-size: 13px;
+            color: $light-text-color;
+        }
+        &__description{
+            display: none;
+        }
+        &__header_active{
+            .summary__title{
+                color: $dark-text-color;
+            }
+        }
+    }
+
+    #planned-header.summary__header_active{
+        border-bottom: 3px solid $planned-color;
+    }
+    #in-progress-header.summary__header_active{
+        border-bottom: 3px solid $in-progress-color;
+    }
+    #live-header.summary__header_active{
+        border-bottom: 3px solid $live-color;
+    }
+
+    .cards{
+        width: 375px;
+        padding: 0 10px;
+        &__column{
+            display: none;
+            width: 100%;
+        }
+        &__column_active{
+            display: block;
+        }
+    }
+    .card{
+        margin: 20px 0 0 0;
+    }
+    #planned-column, #in-progress-column, #live-column {
+        padding: 0;
+    }
+}
