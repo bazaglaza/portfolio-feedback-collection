@@ -664,6 +664,12 @@ body {
     top: 150px;
     width: 185px;
   }
+  .body-container__empty-suggestions-title {
+    font-size: 18px;
+  }
+  .body-container__empty-suggestions-description {
+    font-size: 13px;
+  }
 
   .sort-menu {
     width: 100%;
