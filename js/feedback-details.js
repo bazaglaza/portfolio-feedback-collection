@@ -67,7 +67,7 @@ window.addEventListener("resize", function(){
   if (window.innerWidth < 710) {
       rebuildSuggestionDivForMobile(suggestion_div);
   } else {
-      rebuildrebuildSuggestionDivForNotMobile(suggestion_div);
+      rebuildSuggestionDivForNotMobile(suggestion_div);
   }
 });
 
@@ -282,42 +282,4 @@ function addReplyToCommentForSuggestion(suggestion, comment_id, reply_object){
     })
     SUGGESTIONS_DATA[current_suggestion_index] = suggestion;
     saveDataToDBbyKey(SESSION_STORAGE_SUGGESTIONS_KEY, SUGGESTIONS_DATA)
-}
-
-function rebuildSuggestionDivForMobile(element){
-    if (element.getElementsByClassName("footer-container")[0]){
-        return;
-    }
-    let main_part_div = element.getElementsByClassName("suggestion__center-part")[0];
-    let voting_part = element.getElementsByClassName("suggestion__left-part")[0];
-    let comments_part = element.getElementsByClassName("suggestion__right-part")[0];
-
-    main_part_div.remove();
-    voting_part.remove();
-    comments_part.remove();
-
-    let footer_container = document.createElement('div');
-    footer_container.classList.add("footer-container");
-
-    footer_container.appendChild(voting_part);
-    footer_container.appendChild(comments_part);
-
-    element.appendChild(main_part_div);
-    element.appendChild(footer_container);
-}
-
-function rebuildrebuildSuggestionDivForNotMobile(element){
-    if (element.getElementsByClassName("footer-container")[0]){
-        let main_part_div = element.getElementsByClassName("suggestion__center-part")[0];
-        let voting_part = element.getElementsByClassName("suggestion__left-part")[0];
-        let comments_part = element.getElementsByClassName("suggestion__right-part")[0];
-        let footer_container = element.getElementsByClassName("footer-container")[0];
-
-        main_part_div.remove();
-        footer_container.remove();
-
-        element.appendChild(voting_part);
-        element.appendChild(main_part_div);
-        element.appendChild(comments_part);
-    }
 }

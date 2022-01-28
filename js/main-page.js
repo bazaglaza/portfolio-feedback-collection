@@ -110,6 +110,23 @@ Array.from(add_suggestion_button).forEach(function(item){
     }
 })
 
+//--Burger onclick---
+
+
+
+//---Mobile Resolution changing---
+
+window.addEventListener("resize", function(){
+  if (window.innerWidth < 710) {
+      rebuildMainPageHeaderForMobile();
+      rebuildAllSuggestionsDivsForMobile();
+      addBurgerOnclickAction();
+  } else {
+      rebuildMainPageHeaderForNotMobile();
+      rebuildAllSuggestionsDivsForNotMobile();
+  }
+});
+
 //-----Main Page Updates functions------------
 function updateMainPage(){
 
@@ -156,6 +173,15 @@ function updateMainPage(){
 
     updateRoadmapStats(statuses_stats[0], statuses_stats[1], statuses_stats[2]);
     updateNumberOfShowedSuggestions(showed_items_counter);
+
+    if (window.innerWidth < 710) {
+        rebuildMainPageHeaderForMobile();
+        rebuildAllSuggestionsDivsForMobile();
+        addBurgerOnclickAction();
+    } else {
+        rebuildMainPageHeaderForNotMobile();
+        rebuildAllSuggestionsDivsForNotMobile();
+    }
 }
 
 function updateSortTitle(){
@@ -292,4 +318,115 @@ function createSuggestionDevForMain(suggestion_data){
     suggestion.appendChild(right_part);
 
     return suggestion;
+}
+
+function rebuildMainPageHeaderForMobile(){ // TODO need to refactor
+    if (document.getElementsByClassName("body-container__header-container")[0]){
+        return;
+    }
+
+    let container = document.getElementsByClassName("body-container__summary")[0];
+
+    let header = document.getElementsByClassName("body-container__header")[0];
+    let category_filter = document.getElementsByClassName("body-container__filter")[0];
+    let summary = document.getElementsByClassName("body-container__stats")[0];
+
+    header.remove();
+    category_filter.remove();
+    summary.remove();
+
+    let header_container = document.createElement('div');
+    header_container.classList.add("body-container__header-container");
+    let burger = document.createElement('div');
+    burger.classList.add("body-container__burger");
+    let popup_background = document.createElement('div');
+    popup_background.classList.add("body-container__popup-background");
+    let popup_container = document.createElement('div');
+    popup_container.classList.add("body-container__popup-container");
+
+    header_container.appendChild(header);
+    header_container.appendChild(burger);
+
+    popup_container.appendChild(category_filter);
+    popup_container.appendChild(summary);
+
+    popup_background.appendChild(popup_container);
+
+    container.appendChild(header_container);
+    container.appendChild(popup_background);
+}
+
+function rebuildMainPageHeaderForNotMobile(){
+    if (document.getElementsByClassName("body-container__header-container")[0]){
+        let container = document.getElementsByClassName("body-container__summary")[0];
+
+        let header = document.getElementsByClassName("body-container__header")[0];
+        let category_filter = document.getElementsByClassName("body-container__filter")[0];
+        let summary = document.getElementsByClassName("body-container__stats")[0];
+
+        let header_container = document.getElementsByClassName("body-container__header-container")[0];
+        let popup_background = document.getElementsByClassName("body-container__popup-background")[0];
+
+        header_container.remove();
+        popup_background.remove();
+
+        container.appendChild(header);
+        container.appendChild(category_filter);
+        container.appendChild(summary);
+    }
+}
+
+function rebuildAllSuggestionsDivsForMobile(){
+    let suggestions = document.getElementsByClassName("suggestion");
+
+    Array.from(suggestions).forEach(function(item){
+        rebuildSuggestionDivForMobile(item);
+    })
+}
+
+function rebuildAllSuggestionsDivsForNotMobile(){
+    let suggestions = document.getElementsByClassName("suggestion");
+
+    Array.from(suggestions).forEach(function(item){
+        rebuildSuggestionDivForNotMobile(item);
+    })
+}
+
+function addBurgerOnclickAction(){
+    if (document.getElementsByClassName("body-container__burger")[0]){
+        var burger_button = document.getElementsByClassName("body-container__burger")[0];
+    }
+
+    burger_button.onclick = function(){
+        if (isBurgerOptionsActive()){
+            hideBurgerOptions();
+        } else {
+            showBurgerOptions();
+        }
+//        burger_button.style.display = isBurgerOptionsActive() ? "none" : "block";
+        console.log(burger_button)
+    }
+
+}
+
+function isBurgerOptionsActive(){
+    let burger_option_window = document.getElementsByClassName("body-container__popup-background")[0];
+
+    return (burger_option_window.style.display == "block") ? true : false;
+}
+
+function showBurgerOptions(){
+    let burger_option_window = document.getElementsByClassName("body-container__popup-background")[0];
+    burger_button = document.getElementsByClassName("body-container__burger")[0]
+
+    burger_option_window.style.display = "block";
+    burger_button.style.backgroundImage = "url('../assets/shared/mobile/icon-close.svg')";
+}
+
+function hideBurgerOptions(){
+    let burger_option_window = document.getElementsByClassName("body-container__popup-background")[0];
+    burger_button = document.getElementsByClassName("body-container__burger")[0]
+
+    burger_option_window.style.display = "none";
+    burger_button.style.backgroundImage = "url('../assets/shared/mobile/icon-hamburger.svg')";
 }

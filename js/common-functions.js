@@ -119,3 +119,41 @@ function changeVoteStatus(suggestion, voted_class = "suggestion__voting_voted"){
 function votingIdToSuggestionId(voting_id){
     return parseInt(voting_id.substring(1));
 }
+
+function rebuildSuggestionDivForMobile(element){
+    if (element.getElementsByClassName("footer-container")[0]){
+        return;
+    }
+    let main_part_div = element.getElementsByClassName("suggestion__center-part")[0];
+    let voting_part = element.getElementsByClassName("suggestion__left-part")[0];
+    let comments_part = element.getElementsByClassName("suggestion__right-part")[0];
+
+    main_part_div.remove();
+    voting_part.remove();
+    comments_part.remove();
+
+    let footer_container = document.createElement('div');
+    footer_container.classList.add("footer-container");
+
+    footer_container.appendChild(voting_part);
+    footer_container.appendChild(comments_part);
+
+    element.appendChild(main_part_div);
+    element.appendChild(footer_container);
+}
+
+function rebuildSuggestionDivForNotMobile(element){
+    if (element.getElementsByClassName("footer-container")[0]){
+        let main_part_div = element.getElementsByClassName("suggestion__center-part")[0];
+        let voting_part = element.getElementsByClassName("suggestion__left-part")[0];
+        let comments_part = element.getElementsByClassName("suggestion__right-part")[0];
+        let footer_container = element.getElementsByClassName("footer-container")[0];
+
+        main_part_div.remove();
+        footer_container.remove();
+
+        element.appendChild(voting_part);
+        element.appendChild(main_part_div);
+        element.appendChild(comments_part);
+    }
+}
